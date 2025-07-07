@@ -1,0 +1,10 @@
+button{
+    font-size: 25px;
+    padding: 10px;
+}
+.inicio{
+    background-color: green;
+}
+.pausa{
+    background-color: red;
+}
