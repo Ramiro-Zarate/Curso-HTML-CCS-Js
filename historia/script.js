@@ -3,7 +3,15 @@ let inicio = document.querySelector(".inicio");
 let pausa = document.querySelector(".pausa");
 let duracionMultimedia = video.duration
 let intervalo
-
+let barraNavegacion=document.querySelector(".barraNavegacion")
+let mostrar=()=>{
+    if(window.scrollY > innerHeight*0.5){
+        barraNavegacion.classList.add("navScroll")
+    }else{
+        barraNavegacion.classList.remove("navScroll")
+    }
+}
+window.addEventListener("scroll",mostrar)
     inicio.addEventListener("click",()=>{
     video.play()
     let duracionTotal = document.querySelector("#duracionVideo")
