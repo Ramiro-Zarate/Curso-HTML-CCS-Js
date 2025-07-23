@@ -72,6 +72,30 @@ h2{
     height: 500px;
     text-align: center;
 }
+.carta1{
+    animation: mover1 2s ease 2s forwards;
+}
+@keyframes mover1{
+    from{
+        transform: translatex(-500px);
+        opacity: 0;
+    }
+    to{
+        transform: translatex(0px);
+    }
+}
+.carta2{
+    animation: mover2 2s ease 2s backwards;
+}
+@keyframes mover2{
+    from{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
 .imagenPrincipio{
     height: 300px;
     width: 450px;
