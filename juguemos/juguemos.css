@@ -62,3 +62,23 @@ h2{
     padding: 40px;
     font-size: 40px;
 }
+.contenedorPadre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.contenedor{
+    width: 300px ;
+    height: 400px;
+    background-color: #797979;
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgRompe{
+    width: 200px;
+    height: 400px;
+}

@@ -14,6 +14,8 @@
     align-items: center;
     position: fixed;
     box-sizing: border-box;
+/*     z-index: 10000px; */
+/* Me queda atras de las cartras cuando scrolleo */
     padding-right: 40px;
     padding-left: 40px;
     margin: 0;
@@ -59,6 +61,7 @@ svg{
 .cartaHistoria{
     display: flex;
     justify-content: space-between;
+    perspective: 3000px;
     align-items: center;
     padding: 150px 100px;
     padding-bottom: 0;
@@ -68,16 +71,70 @@ svg{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    opacity: 0;
 }
 .textoCarta>h2{
     font-size: 40px;
     text-align: center;
 }
-.carta-2>img{
-    width: 50%;
+.imgCarta1{
+    opacity: 0;
 }
-#carta-2{
+.aparicionImg1{
+    animation: aparecer1 1s ease-in-out 1s forwards;
+    opacity: 0;
+}
+@keyframes aparecer1 {
+    from{
+        transform: translateZ(400px) translateX(-400px) translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateZ(0px) translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+}
+.aparicionTexto1{
+    animation: apareceTexto1 1s ease-in 1s forwards;
+}
+@keyframes apareceTexto1{
+    from{
+        transform:  translateZ(100px) translateX(100px) translateY(-100px)  rotateX(-30deg) rotateY(-10deg);
+    }
+    to{
+        transform: translateZ(0px) translateX(0px) translateY(0px) rotateX(0) rotateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+#carta-2>img{
     width: 50%;
+    opacity: 0;
+}
+.apareceImagen2{
+    animation: aparecer2 1s ease-in-out 1s forwards;
+    opacity: 0;
+}
+@keyframes aparecer2 {
+    from{
+        transform: translateZ(400px) translateX(600px) translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateZ(0px) translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+}
+.aparicionTexto2{
+    animation: apareceTexto2 1s ease-in 1s forwards;
+}
+@keyframes aparicionTexto2 {
+    from{
+        transform:  translateZ(100px) translateX(100px) /* translateY(100px)  rotateX(30deg) rotateY(10deg) ; */
+    }
+    to{
+        transform: translateZ(0px) translateX(0px) translateY(0px) rotateX(0) rotateY(0) rotateY(0);
+        opacity: 1;
+    }
 }
 .contenedorVideo{
     padding-top: 200px;

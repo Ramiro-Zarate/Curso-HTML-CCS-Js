@@ -2,8 +2,9 @@ let video= document.querySelector(".video");
 let inicio = document.querySelector(".inicio");
 let pausa = document.querySelector(".pausa");
 let duracionMultimedia = video.duration
-let intervalo
 let barraNavegacion=document.querySelector(".barraNavegacion")
+
+
 let mostrar=()=>{
     if(window.scrollY > innerHeight*0.5){
         barraNavegacion.classList.add("navScroll")
@@ -12,6 +13,35 @@ let mostrar=()=>{
     }
 }
 window.addEventListener("scroll",mostrar)
+
+
+let imagen1=document.querySelector(".imgCarta1")
+let texto1=document.querySelector("#texto1")
+const apareceImg1=()=>{
+    if(window.scrollY > innerHeight*0.5){
+        imagen1.classList.add("aparicionImg1")
+        texto1.classList.add("aparicionTexto1")
+    }
+}
+window.addEventListener("scroll",apareceImg1)
+
+
+let imagen2 = document.querySelector("#img-2")
+let texto2= document.querySelector("#texto2")
+// Altura imagen dos: scrollY 1000
+let alturaCarta2 = 1000
+
+const aparecerCarta2 = ()=>{
+    if(window.scrollY >= alturaCarta2){
+        imagen2.classList.add("apareceImagen2")
+        texto2.classList.add("aparicionTexto2")
+    }
+}
+window.addEventListener("scroll",aparecerCarta2)
+
+// Altura imagen 3: scrollY: 1700
+
+
     inicio.addEventListener("click",()=>{
     video.play()
     let duracionTotal = document.querySelector("#duracionVideo")
@@ -25,6 +55,8 @@ window.addEventListener("scroll",mostrar)
     video.pause()
     clearInterval(intervalo)
 })
+
+
 
 
 const editarDuracion=(duracionMultimedia)=>{
