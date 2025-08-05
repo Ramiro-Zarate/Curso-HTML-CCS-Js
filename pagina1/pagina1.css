@@ -36,11 +36,20 @@
 }
 .barraNavegacion.navScroll .linkNav {
     color: black;
+    text-shadow: 2px 2px 0px grey, 2px 2px white;
+    font-weight: 500;
 }
 ul{
     display: flex;
     justify-content: space-around;
     list-style: none;
+    text-shadow: 2px 2px 0px black, 2px 2px grey;
+}
+.historiaNav:hover{
+    text-shadow: none;
+}
+.juguemosNav:hover{
+    text-shadow: none;
 }
 h1{
     display: block;
@@ -50,6 +59,7 @@ h1{
     font-weight: 400;
     text-transform: uppercase;
     color: white;
+    text-shadow: 4px 4px 0px black, 4px 4px grey;
 }
 svg{
     padding-left: 40px;
@@ -60,8 +70,11 @@ svg{
 h2{
     text-align: center;
     font-size: 40px;
+    font-weight: 500;
     text-transform: uppercase;
     padding: 40px;
+    color: #2F3645;
+    text-shadow: 2px 2px 3px white, 3px 2px grey;
 }
 #seccionPrincipal{
     display: flex;
