@@ -1,6 +1,9 @@
 *{
     font-family: raleway, sans-serif;
 }
+head{
+    perspective: 5000px;
+}
 .header{
     height: 900px;
     background-image: url(../assets/historia-programacion.jpg);
@@ -14,8 +17,7 @@
     align-items: center;
     position: fixed;
     box-sizing: border-box;
-/*     z-index: 10000px; */
-/* Me queda atras de las cartras cuando scrolleo */
+    z-index: 4800;
     padding-right: 40px;
     padding-left: 40px;
     margin: 0;
@@ -94,7 +96,7 @@ svg{
     opacity: 0;
 }
 .aparicionImg1{
-    animation: aparecer1 1s ease-in-out 1s forwards;
+    animation: aparecer1 2s ease-in-out 1s forwards;
     opacity: 0;
 }
 @keyframes aparecer1 {
@@ -108,14 +110,15 @@ svg{
     }
 }
 .aparicionTexto1{
-    animation: apareceTexto1 1s ease-in 1s forwards;
+    animation: apareceTexto1 2s ease-in 1s forwards;
 }
 @keyframes apareceTexto1{
     from{
-        transform:  translateZ(100px) translateX(100px) translateY(-100px)  rotateX(-30deg) rotateY(-10deg);
+        transform:  translateZ(-600px) translateX(600px) /* translateY(-100px)  */ rotateX(-20deg) rotateY(-45deg);
+        opacity: 0;
     }
     to{
-        transform: translateZ(0px) translateX(0px) translateY(0px) rotateX(0) rotateY(0) rotateY(0);
+        transform: translateZ(0px) translateX(0px) translateY(0px) rotateX(0) rotateY(0);
         opacity: 1;
     }
 }
@@ -138,17 +141,46 @@ svg{
     }
 }
 .aparicionTexto2{
-    animation: apareceTexto2 1s ease-in 1s forwards;
+    animation: aparicionTexto2 2s ease-in 1s forwards;
 }
-@keyframes aparicionTexto2 {
+@keyframes aparicionTexto2{
     from{
-        transform:  translateZ(100px) translateX(100px) /* translateY(100px)  rotateX(30deg) rotateY(10deg) ; */
+        transform: translateZ(-600px) translateX(-600px) rotateY(45deg) /* faltaria un rotateX, pero no me gusta como esta quedando */;
+        opacity: 0;
     }
     to{
-        transform: translateZ(0px) translateX(0px) translateY(0px) rotateX(0) rotateY(0) rotateY(0);
+        transform: translateZ(0px) translateX(0px) translateY(0px) rotateX(0) rotateY(0);
         opacity: 1;
     }
 }
+.apareceImagen3{
+    animation: aparecer3 2s ease-in-out 1s forwards;
+    opacity: 0;
+}
+@keyframes aparecer3{
+    from{
+        transform: translateZ(400px) translateX(-400px) translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateZ(0px) translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+}
+.apareceTexto3{
+    animation: apareceTexto3 2s ease-in 1s forwards;
+}
+@keyframes apareceTexto3{
+    from{
+        transform:  translateZ(-600px) translateX(600px) rotateY(-45deg) rotateX(-30deg);
+        opacity: 0;
+    }
+    to{
+        transform: translateZ(0px) translateX(0px) translateY(0px) rotateX(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
 .contenedorVideo{
     padding-top: 200px;
     display: flex;

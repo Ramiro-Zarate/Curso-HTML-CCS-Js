@@ -6,7 +6,7 @@ let barraNavegacion=document.querySelector(".barraNavegacion")
 
 
 let mostrar=()=>{
-    if(window.scrollY > innerHeight*0.5){
+    if(window.scrollY > innerHeight*0.4){
         barraNavegacion.classList.add("navScroll")
     }else{
         barraNavegacion.classList.remove("navScroll")
@@ -39,8 +39,17 @@ const aparecerCarta2 = ()=>{
 }
 window.addEventListener("scroll",aparecerCarta2)
 
+let imagen3 = document.querySelector(".imagen3")
+let texto3 = document.querySelector("#texto3")
 // Altura imagen 3: scrollY: 1700
+let alturaCarta3 = 1700
 
+const aparecerCarta3 = ()=>{
+    if(window.scrollY >= alturaCarta3){
+        imagen3.classList.add("apareceImagen3")
+        texto3.classList.add("apareceTexto3")
+    }
+}
 
     inicio.addEventListener("click",()=>{
     video.play()
