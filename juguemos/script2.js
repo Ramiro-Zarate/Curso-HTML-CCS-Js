@@ -58,23 +58,23 @@ contenedor3.addEventListener("dragover",(event)=>{
 
 contenedor1.addEventListener("drop", (event)=>{
     let contenidoRecibido1 = event.dataTransfer.getData("text")
-    contenedor1.innerHTML=`<img id="img1" src="${contenidoRecibido1}"/>`
+    contenedor1.innerHTML=`<img id="img1" src="${contenidoRecibido1}" height="100%" width="100% style="transform: rotate(0deg)"/>`
     if (contenidoRecibido1.includes("Rompe1")){ //no hace falta splitear
-        console.log("gol")
+        console.log("imagen correcta")
     }
 })
 contenedor2.addEventListener("drop", (event)=>{
     let contenidoRecibido2 = event.dataTransfer.getData("text")
-    contenedor2.innerHTML=`<img id="img2" src="${contenidoRecibido2}"/>`
+    contenedor2.innerHTML=`<img id="img2" src="${contenidoRecibido2}" height="100%" width="100% style="transform: rotate(0deg)"/>`
     if (contenidoRecibido2.includes("rompe2")){
-        console.log("gol")
+        console.log("imagen correcta")
     }
 })
 contenedor3.addEventListener("drop", (event)=>{
     let contenidoRecibido3 = event.dataTransfer.getData("text")
-    contenedor3.innerHTML=`<img id="img3" src="${contenidoRecibido3}"/>`
+    contenedor3.innerHTML=`<img id="img3" src="${contenidoRecibido3}" height="100%" width="100% style="transform: rotate(0deg)"/>`
     if (contenidoRecibido3.includes("Rompe3")){
-        console.log("gol")
+        console.log("imagen correcta")
     }
 })
 

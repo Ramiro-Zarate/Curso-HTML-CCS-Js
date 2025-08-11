@@ -127,7 +127,7 @@ svg{
     opacity: 0;
 }
 .apareceImagen2{
-    animation: aparecer2 1s ease-in-out 1s forwards;
+    animation: aparecer2 2s ease-in-out 1s forwards;
     opacity: 0;
 }
 @keyframes aparecer2 {
@@ -172,7 +172,7 @@ svg{
 }
 @keyframes apareceTexto3{
     from{
-        transform:  translateZ(-600px) translateX(600px) rotateY(-45deg) rotateX(-30deg);
+        transform:  translateZ(-600px) translateX(400px) rotateY(-45deg) rotateX(-30deg);
         opacity: 0;
     }
     to{

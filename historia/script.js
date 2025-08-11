@@ -51,6 +51,8 @@ const aparecerCarta3 = ()=>{
     }
 }
 
+window.addEventListener("scroll", aparecerCarta3)
+
     inicio.addEventListener("click",()=>{
     video.play()
     let duracionTotal = document.querySelector("#duracionVideo")

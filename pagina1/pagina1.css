@@ -86,7 +86,7 @@ h2{
     text-align: center;
 }
 .carta1{
-    animation: mover1 2s ease 2s backwards;
+    animation: mover1 3s ease 3s backwards;
 }
 @keyframes mover1{
     from{
